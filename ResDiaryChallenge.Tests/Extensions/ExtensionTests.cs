@@ -77,7 +77,7 @@ public class Tests
     }
     
     [Test]
-    public void GroupElements_SourceIsNUll_Exception2()
+    public void GroupElements_SourceIsEmpty_Success()
     {
         //Arrange
         int[] sut = { };
@@ -86,6 +86,7 @@ public class Tests
         //Act
         int[][] result = sut.GroupElements(numberOfGroups);
         
+        //Assert
         Assert.That(numberOfGroups, Is.EqualTo(result.Length));
         Assert.That(result[0], Is.EqualTo(new int[] {}));
         Assert.That(result[1], Is.EqualTo(new int[] {}));
